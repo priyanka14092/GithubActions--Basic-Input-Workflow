@@ -30,12 +30,14 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: 3.9
-
+      env:
+        firstNum : github.event.inputs.numOne
+        secondNum : github.event.inputs.numTwo
       # Runs a set of commands using the runners shell
       - name: Run python script for prime number
         run: |
-          python prime.py ${{github.event.inputs.numOne}} ${{github.event.inputs.numTwo}}
-          python add.py ${{github.event.inputs.numOne}} ${{github.event.inputs.numTwo}}
+          python prime.py $firstNum $secondNum
+          python add.py $firstNum $secondNum
 
       # # Runs a single command using the runners shell
       # - name: Run python script for add number
