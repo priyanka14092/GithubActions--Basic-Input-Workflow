@@ -1,17 +1,32 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Workflow Dispatch Input
+name: GithubActions--Workflow-Dispatch-Input
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      numOne:
+        description: 'Enter first number:'
+        required: true
+      numTwo:
+        description: 'Enter second number:'
+        required: true
+      # tags:
+      #   description: 'Test scenario tags'
+      #   required: false
+      #   type: boolean
+      # environment:
+      #   description: 'Environment to run tests against'
+      #   type: environment
+      #   required: true
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,5 +47,11 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          firstNum = ${{github.event.inputs.numOne}} python prime.py
+          lastNum = ${{github.event.inputs.numTwo}} python prime.py
+          
+#           echo Add other actions to build,
+#           echo test, and deploy your project.
+# run: |
+# #       echo "Store: ${{ github.event.inputs.myInput }}"
+# #       INPUT_STORE=${{ github.event.inputs.myInput }} python3 test.py
