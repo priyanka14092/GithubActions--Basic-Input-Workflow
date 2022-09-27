@@ -49,4 +49,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run python script
         run: |
-          py prime.py ${{github.event.inputs.numOne}} ${{github.event.inputs.numTwo}}
+          python prime.py ${{github.event.inputs.numOne}} ${{github.event.inputs.numTwo}}
