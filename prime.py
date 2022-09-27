@@ -1,7 +1,7 @@
-import os
+import sys
 
-firstNum = os.environ['firstNum']
-lastNum = os.environ['secondNum']
+firstNum = int(sys.argv[1])
+lastNum = int(sys.argv[2])
 
 for i in range(firstNum, lastNum + 1):
   if i > 1:
@@ -10,14 +10,3 @@ for i in range(firstNum, lastNum + 1):
         break
       else:
         print(f"Prime Number between {firstNum} and {lastNum} are: {i}")
-
-# run: |
-#       echo "Store: ${{ github.event.inputs.myInput }}"
-#       INPUT_STORE=${{ github.event.inputs.myInput }} python3 test.py
-# test.py file:
-
-# import os
-
-# input_variable = os.environ['INPUT_STORE']
-
-# print("Input Variable:", input_variable)

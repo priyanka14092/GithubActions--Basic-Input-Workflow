@@ -40,7 +40,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
         with:
-          python-version: '3.9'
+          python-version: 3.9
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -49,4 +49,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run python script
         run: |
-          python prime.py firstNum = ${{github.event.inputs.numOne}} lastNum = ${{github.event.inputs.numTwo}}
+          py prime.py ${{github.event.inputs.numOne}} ${{github.event.inputs.numTwo}}
