@@ -1,4 +1,4 @@
-import os
+# import os
 
 firstNum = os.environ['firstNum']
 lastNum = os.environ['secondNum']
