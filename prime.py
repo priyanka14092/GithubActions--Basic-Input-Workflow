@@ -11,4 +11,4 @@ for i in range(firstNum, lastNum + 1):
       count = count + 1
       break
   if (count == 0 and i != 1):
-    print(f"{i}, ", end = ' ')
+    print(f"{i} ", end = ' ')
