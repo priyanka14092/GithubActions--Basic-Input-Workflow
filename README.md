@@ -1,2 +1,2 @@
 # GithubActions--InputLabel
-Take input using input labels in workflow dispatch.
+This repository contains GitHub Actions Workflow to take user input using input labels in workflow dispatch.
