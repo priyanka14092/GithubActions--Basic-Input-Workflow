@@ -17,6 +17,8 @@ env:
 jobs:
   pythonScripts:
     runs-on: ubuntu-latest
+    environment: "Approval"
+    
 
     steps:
       - uses: actions/checkout@v3
