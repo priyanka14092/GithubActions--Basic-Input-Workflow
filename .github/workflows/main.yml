@@ -17,7 +17,7 @@ env:
 jobs:
   pythonScripts:
     runs-on: ubuntu-latest
-    environment: "Approval"
+    # environment: "Approval"
     
 
     steps:
